@@ -4,4 +4,5 @@
     <string name="title_activity_register">RegisterActivity</string>
     <string name="title_activity_browse_books">BrowseBooksActivity</string>
     <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_creat_new_post">CreatNewPostActivity</string>
 </resources>

@@ -1,11 +1,13 @@
 package app.annaj.android.example.com.bookbot;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 
 public class BrowseBooksActivity extends AppCompatActivity {
@@ -33,8 +35,40 @@ public class BrowseBooksActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
 
         //inflate menu.add items to action bar
-        getMenuInflater().inflate(R.menu.browsebooks,menu);
+        getMenuInflater().inflate(R.menu.browsebooks, menu);
         return true; //super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        //Handle action bar item clicks here
+        //will automatically handle clicks on the Bowse book page
+        //as long as you specify a parent activity in manifest.xml
+
+        int id=item.getItemId();
+        switch (id){
+            case R.id.createNewPost:
+                //take user to post activity
+
+                Intent intent=new Intent(this,CreatNewPostActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.logoutUser:
+                //log out
+
+                break;
+
+
+            case R.id.scannerMenu:
+                //take to scanner
+
+                break;
+
+
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
 
