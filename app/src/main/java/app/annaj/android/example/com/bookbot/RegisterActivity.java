@@ -9,7 +9,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.parse.Parse;
 import com.parse.ParseException;
 import com.parse.ParseUser;
 import com.parse.SignUpCallback;
@@ -35,9 +34,9 @@ public class RegisterActivity extends Activity {
             }
         });*/
         // Enable Local Datastore.
-        Parse.enableLocalDatastore(this);
+       // Parse.enableLocalDatastore(this);
 
-        Parse.initialize(this);
+       // Parse.initialize(this);
 
         
 

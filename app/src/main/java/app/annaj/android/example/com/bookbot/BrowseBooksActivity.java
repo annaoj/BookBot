@@ -10,7 +10,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.parse.Parse;
 import com.parse.ParseUser;
 
 public class BrowseBooksActivity extends AppCompatActivity {
@@ -21,8 +20,8 @@ public class BrowseBooksActivity extends AppCompatActivity {
         setContentView(R.layout.activity_browse_books);
 
 
-         Parse.enableLocalDatastore(this);
-         Parse.initialize(this);
+       //  Parse.enableLocalDatastore(this);
+      //   Parse.initialize(this);
 
         ParseUser currentUser = ParseUser.getCurrentUser();
        /* if (currentUser != null) {
