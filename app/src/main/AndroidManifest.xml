@@ -2,21 +2,43 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="app.annaj.android.example.com.bookbot" >
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="com.parse.APPLICATION_ID"
+            android:value="0kdUktjfQ6J0SErK6dI40vRSiwHI2AdCTgCNNJtb" />
+        <meta-data
+            android:name="com.parse.CLIENT_KEY"
+            android:value="fT7NrKkGcy1vMXkB6xfMFDF26MIQ8hM3FMVY3AHT" />
+
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" >
+
+        </activity>
+        <activity
+            android:name=".RegisterActivity"
+            android:label="@string/title_activity_register"
+            android:theme="@style/AppTheme.NoActionBar" >
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".BrowseBooksActivity"
+            android:label="@string/title_activity_browse_books"
+            android:theme="@style/AppTheme.NoActionBar" >
         </activity>
     </application>
 
