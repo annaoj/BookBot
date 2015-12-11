@@ -37,6 +37,15 @@ public class LoginActivity extends Activity {
         mLoginBtn =(Button)findViewById(R.id.loginBtn);
         mCreatAccountBtn =(Button)findViewById(R.id.createAccBtn);
 
+        //listen to when create acc btn is clicked
+        mCreatAccountBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent takeUserToReg=new Intent(LoginActivity.this,RegisterActivity.class);
+                startActivity(takeUserToReg);
+            }
+        });
+
 
         //listen to when th login btn is clicked
         mLoginBtn.setOnClickListener(new View.OnClickListener() {

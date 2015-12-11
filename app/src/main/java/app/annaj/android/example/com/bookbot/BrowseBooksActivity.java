@@ -10,12 +10,33 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.parse.Parse;
+import com.parse.ParseUser;
+
 public class BrowseBooksActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_browse_books);
+
+
+         Parse.enableLocalDatastore(this);
+         Parse.initialize(this);
+
+        ParseUser currentUser = ParseUser.getCurrentUser();
+       /* if (currentUser != null) {
+            // do stuff with the user
+
+
+
+        } else {
+            // show the signup or login screen
+
+            Intent takeUserToLogin=new Intent(this,LoginActivity.class);
+            startActivity(takeUserToLogin);
+        }*/
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -55,7 +76,11 @@ public class BrowseBooksActivity extends AppCompatActivity {
                 break;
 
             case R.id.logoutUser:
-                //log out
+                //log out with Parse
+                ParseUser.logOut();
+                //take back to log in screen
+                Intent takeUSerToLogin=new Intent(this,LoginActivity.class);
+                startActivity(takeUSerToLogin);
 
                 break;
 
