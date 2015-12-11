@@ -24,6 +24,15 @@ public class BrowseBooksActivity extends AppCompatActivity {
       //   Parse.initialize(this);
 
         ParseUser currentUser = ParseUser.getCurrentUser();
+       if (currentUser != null) {
+       //show Browsebook Activity
+       }
+        else {
+           // show the signup or login screen
+           Intent takeUserToLogin=new Intent(this,LoginActivity.class);
+           startActivity(takeUserToLogin);
+       }
+
        /* if (currentUser != null) {
             // do stuff with the user
 
