@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -8,6 +8,21 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/activity_creat_new_post"
-    tools:context="app.annaj.android.example.com.bookbot.CreatNewPostActivity">
+    android:orientation="vertical">
 
-</RelativeLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="150dp" android:hint="Create new post to sell or buy a book"
+        android:gravity="top"
+        android:id="@+id/postbookEditText"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:text="Post"
+        android:id="@+id/postBookBtn"/>
+
+
+
+
+</LinearLayout>

@@ -16,10 +16,10 @@ public class SplashScreen extends AppCompatActivity {
             public void run(){
                 try {
                     sleep(3000);
-                    Intent startBrowseBook=new Intent(getApplicationContext(),BrowseBooksActivity.class);
-                    startActivity(startBrowseBook);
-                   // Intent startLoginActivity=new Intent(getApplicationContext(),LoginActivity.class);
-                   //startActivity(startLoginActivity);
+                    //Intent startBrowseBook=new Intent(getApplicationContext(),BrowseBooksActivity.class);
+                  //  startActivity(startBrowseBook);
+                   Intent startLoginActivity=new Intent(getApplicationContext(),LoginActivity.class);
+                   startActivity(startLoginActivity);
                     finish();
                 } catch (InterruptedException e) {
                     e.printStackTrace();

@@ -65,7 +65,7 @@ public class LoginActivity extends Activity {
 
                             //take user to browsebooks
 
-                            Intent takeUserToBrowseBooks = new Intent(LoginActivity.this, BrowseBooksActivity.class);
+                            Intent takeUserToBrowseBooks = new Intent(LoginActivity.this, MainActivity.class);
                             startActivity(takeUserToBrowseBooks);
 
                         } else {
