@@ -69,7 +69,7 @@ public class RegisterActivity extends Activity {
                             Toast.makeText(RegisterActivity.this, "Success.Welcome!", Toast.LENGTH_LONG).show();
                             //take user to the home page
 
-                            Intent takeUserToBrowseBooks=new Intent(RegisterActivity.this,MainActivity.class);
+                            Intent takeUserToBrowseBooks=new Intent(RegisterActivity.this,BrowseBooksActivity.class);
                             startActivity(takeUserToBrowseBooks);
                         }
                         else{

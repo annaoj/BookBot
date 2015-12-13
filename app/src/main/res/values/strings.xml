@@ -6,4 +6,6 @@
     <string name="title_activity_login">LoginActivity</string>
     <string name="title_activity_creat_new_post">CreatNewPostActivity</string>
     <string name="title_activity_book_list">BookListActivity</string>
+    <string name="scannerMenu">Scanner</string>
+
 </resources>

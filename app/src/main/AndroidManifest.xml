@@ -33,7 +33,6 @@
             android:name=".LoginActivity"
             android:label="@string/title_activity_login"
             android:theme="@style/AppTheme.NoActionBar" >
-
         </activity>
         <activity android:name=".SplashScreen" >
             <intent-filter>
@@ -46,6 +45,13 @@
             android:name=".CreatNewPostActivity"
             android:label="@string/title_activity_creat_new_post"
             android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".BrowseBooksActivity"
+            android:label="@string/title_activity_browse_books"
+            android:theme="@style/AppTheme.NoActionBar" >
+
+
         </activity>
     </application>
 
