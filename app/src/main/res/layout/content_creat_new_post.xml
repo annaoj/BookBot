@@ -20,7 +20,8 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content" android:text="Post"
-        android:id="@+id/postBookBtn"/>
+        android:id="@+id/postBookBtn"
+        android:background="#c4f05752" />
 
 
 

@@ -44,47 +44,65 @@ public class CreatNewPostActivity extends AppCompatActivity {
 
                 //get the post enteretd and convert into string
                 String newPost=mPostBookEditText.getText().toString();
-
-                ParseObject gameScore = new ParseObject("GameScore");
-                gameScore.put("score", 1337);
-                gameScore.put("playerName", "Sean Plott");
-                gameScore.put("cheatMode", false);
-                gameScore.saveInBackground();
-                //save the status in Parse
-
-                ParseObject bookpostObject= new ParseObject("BookPosts");
-                bookpostObject.put("newPost",newPost);
-                bookpostObject.put("user",currentUserUsername);
-                bookpostObject.saveInBackground(new SaveCallback() {
-                    @Override
-                    public void done(ParseException e) {
-                        if (e== null){
-                            //succes
-                            Toast.makeText(CreatNewPostActivity.this,"Succes",Toast.LENGTH_LONG).show();
-
-                            //take user to browse book
-                            Intent takeUserToBrowse = new Intent(CreatNewPostActivity.this,MainActivity.class);
-                            startActivity(takeUserToBrowse);
+                ///Validation if post is empty
+                if (newPost.isEmpty()){
+                    //show error meassage
+                    AlertDialog.Builder builder = new AlertDialog.Builder(CreatNewPostActivity.this);
+                    builder.setMessage("Post can not be empty");
+                    builder.setTitle("Error");
+                    builder.setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int which) {
+                            //close dialog
+                            dialogInterface.dismiss();
                         }
-                        else{
-                            //error
-                            AlertDialog.Builder builder = new AlertDialog.Builder(CreatNewPostActivity.this);
-                            builder.setMessage(e.getMessage());
-                            builder.setTitle("sorry");
-                            builder.setPositiveButton("ok", new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialogInterface, int which) {
-                                    //close dialog
-                                    dialogInterface.dismiss();
-                                }
-                            });
-                            AlertDialog dialog = builder.create();
-                            dialog.show();
+                    });
+                    AlertDialog dialog = builder.create();
+                    dialog.show();
+
+
+                }
+                else {
+
+                    ParseObject gameScore = new ParseObject("GameScore");
+                    gameScore.put("score", 1337);
+                    gameScore.put("playerName", "Sean Plott");
+                    gameScore.put("cheatMode", false);
+                    gameScore.saveInBackground();
+                    //save the status in Parse
+
+                    ParseObject bookpostObject = new ParseObject("BookPosts");
+                    bookpostObject.put("newPost", newPost);
+                    bookpostObject.put("user", currentUserUsername);
+                    bookpostObject.saveInBackground(new SaveCallback() {
+                        @Override
+                        public void done(ParseException e) {
+                            if (e == null) {
+                                //succes
+                                Toast.makeText(CreatNewPostActivity.this, "Succes", Toast.LENGTH_LONG).show();
+
+                                //take user to browse book
+                                Intent takeUserToBrowse = new Intent(CreatNewPostActivity.this, MainActivity.class);
+                                startActivity(takeUserToBrowse);
+                            } else {
+                                //error
+                                AlertDialog.Builder builder = new AlertDialog.Builder(CreatNewPostActivity.this);
+                                builder.setMessage(e.getMessage());
+                                builder.setTitle("sorry");
+                                builder.setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialogInterface, int which) {
+                                        //close dialog
+                                        dialogInterface.dismiss();
+                                    }
+                                });
+                                AlertDialog dialog = builder.create();
+                                dialog.show();
+                            }
                         }
-                    }
-                });
+                    });
 
-
+                }//end of else
             }
         });
 
