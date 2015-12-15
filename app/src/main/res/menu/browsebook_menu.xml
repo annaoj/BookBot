@@ -3,17 +3,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".BrowseBookActivity">
 
+
+    <item
+        android:id="@+id/createNewPost"
+        android:title="Add Post"
+        app:showAsAction="never" />
+
+
+    <item
+        android:id="@+id/userProfile"
+        android:title="Profile"
+        app:showAsAction="never" />
     <item
         android:id="@+id/action_settings"
         android:title="Settings"
         app:showAsAction="never" />
-
-
-    <item
-        android:id="@+id/createNewPost"
-        android:title="createNewPost"
-        app:showAsAction="never" />
-
     <item
         android:id="@+id/logoutUser"
         android:title="LogOut"

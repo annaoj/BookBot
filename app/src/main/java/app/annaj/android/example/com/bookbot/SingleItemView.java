@@ -10,9 +10,10 @@ import android.widget.TextView;
 
 public class SingleItemView extends Activity {
     // Declare Variables
-    TextView txtname;
+    TextView txtContentTitle;
     String newPost;
-
+    String usernameLV;
+    TextView usernameTitle;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,14 +23,20 @@ public class SingleItemView extends Activity {
         // Retrieve data from MainActivity on item click event
         Intent i = getIntent();
 
-        // Get the name
+        // Get the post
         newPost = i.getStringExtra("newPost");
+        //get user
+        usernameLV=i.getStringExtra("user");
 
         // Locate the TextView in singleitemview.xml
-        txtname = (TextView) findViewById(R.id.newPost);
+        txtContentTitle = (TextView) findViewById(R.id.newPost);
 
+        // Locate the TextView in singleitemview.xml for user
+        usernameTitle=(TextView)findViewById(R.id.usernameLV);
         // Load the text into the TextView
-        txtname.setText(newPost);
+        txtContentTitle.setText(newPost);
+// Load the text into the TextView
+        usernameTitle.setText(usernameLV);
 
     }
 }

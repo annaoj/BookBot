@@ -2,21 +2,43 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+    android:layout_height="fill_parent"
+    android:padding="20dp">
 
     <TextView
-        android:id="@+id/namelabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/usernameTitle"
+        android:text="Author :"
+        android:textSize="25sp"       />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/usernameLV"
+        android:textSize="25sp"
+        android:layout_below="@+id/usernameTitle"
+        />
+
+    <TextView
+        android:id="@+id/txtContentTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="Post:"
-        android:textSize="25sp" />
+        android:textSize="25sp"
+        android:layout_below="@+id/usernameLV"/>
+
+
+
 
     <TextView
         android:id="@+id/newPost"
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/namelabel"
+        android:layout_below="@+id/txtContentTitle"
         android:textSize="25sp" />
+
+
 
 </RelativeLayout>

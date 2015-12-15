@@ -34,7 +34,7 @@ public class UserHomePageActivity extends AppCompatActivity {
 mBookList.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
-        Intent takeUserToList=new Intent(UserHomePageActivity.this,BrowseBooksActivity.class);
+        Intent takeUserToList=new Intent(UserHomePageActivity.this,BookListingActivity.class);
         startActivity(takeUserToList);
     }
 });
@@ -95,9 +95,12 @@ mPostBook.setOnClickListener(new View.OnClickListener() {
 
                 break;
 
+            case R.id.userProfile:
+                //take to profile
 
+                break;
             case R.id.action_settings:
-                //take to scanner
+                //take to settings
 
                 break;
 

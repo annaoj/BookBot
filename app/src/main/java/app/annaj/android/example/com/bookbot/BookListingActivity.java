@@ -134,9 +134,10 @@ public class BookListingActivity extends AppCompatActivity {
                     // Send single item click data to SingleItemView Class
                     Intent i = new Intent(BookListingActivity.this,
                             SingleItemView.class);
-                    // Pass data "name" followed by the position
+                    // Pass data "newPost" and "user" followed by the position
                     i.putExtra("newPost", ob.get(position).getString("newPost")
                             .toString());
+                    i.putExtra("user",ob.get(position).get("user").toString());
                     // Open SingleItemView.java Activity
                     startActivity(i);
                 }
