@@ -5,7 +5,6 @@
 
     <item
         android:id="@+id/scannerMenu"
-
         android:title="@string/scannerMenu"
         app:showAsAction="never" />
 
@@ -18,5 +17,5 @@
     <item
         android:id="@+id/logoutUser"
         android:title="LogOut"
-        app:showAsAction="always" />
+        app:showAsAction="never" />
 </menu>
