@@ -1,52 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+
+    android:background="@drawable/booklogin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:showIn="@layout/activity_login"
-    tools:context="app.annaj.android.example.com.ubooks.LoginActivity"
-    android:orientation="vertical"
-    >
 
+    tools:context="app.annaj.android.example.com.ubooks.LoginActivity"
+    tools:showIn="@layout/activity_login"
+
+    >
+<LinearLayout
+    android:layout_centerInParent="true"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp"
+    android:background="@drawable/shape"
+   >
 
     <EditText
+        android:id="@+id/usernameLoginTextBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Username"
-        android:id="@+id/usernameLoginTextBox"/>
-
+        android:padding="10dp"
+        android:layout_margin="4dp"
+        />
 
 
     <EditText
+        android:id="@+id/passwordLoginTextBox"
         android:layout_width="match_parent"
+        android:padding="10dp"
+        android:layout_margin="4dp"
         android:layout_height="wrap_content"
-
         android:hint="Password"
-        android:id="@+id/passwordLoginTextBox"/>
+        />
 
     <Button
+        android:id="@+id/loginBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_margin="4dp"
         android:text="Login"
-        android:id="@+id/loginBtn"/>
+        android:background="@drawable/btncreateaccount"
+        style="@style/ButtonText"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="or"
-        android:gravity="center_horizontal"/>
+        android:gravity="center_horizontal"
+        android:text="or"  android:textColor="#ffffff"/>
 
 
     <Button
+        android:id="@+id/createAccBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Create Account"
-        android:id="@+id/createAccBtn"/>
-
-
+        android:background="@drawable/btncreateaccount" style="@style/ButtonText"/>
 
 </LinearLayout>
+</RelativeLayout>
