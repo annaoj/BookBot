@@ -12,12 +12,12 @@ import android.view.View;
 
 import com.parse.ParseUser;
 
-public class BrowseBooksActivity extends AppCompatActivity{
+public class UserHomePageActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_browse_books);
+        setContentView(R.layout.activity_user_home_page);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -30,13 +30,12 @@ public class BrowseBooksActivity extends AppCompatActivity{
             }
         });
     }
-
     @Override
-  public boolean onCreateOptionsMenu(Menu menu) {
-    // Inflate the menu; this adds items to the action bar if it is present.
-    getMenuInflater().inflate(R.menu.browsebook_menu, menu);
-    return true;
-}
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.browsebook_menu, menu);
+        return true;
+    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -72,4 +71,5 @@ public class BrowseBooksActivity extends AppCompatActivity{
 
         return super.onOptionsItemSelected(item);
     }
+
 }

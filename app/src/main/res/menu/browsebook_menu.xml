@@ -4,15 +4,15 @@
     tools:context=".BrowseBookActivity">
 
     <item
-        android:id="@+id/scannerMenu"
-        android:title="@string/scannerMenu"
+        android:id="@+id/action_settings"
+        android:title="Settings"
         app:showAsAction="never" />
 
 
     <item
         android:id="@+id/createNewPost"
         android:title="createNewPost"
-        app:showAsAction="always" />
+        app:showAsAction="never" />
 
     <item
         android:id="@+id/logoutUser"
