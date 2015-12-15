@@ -8,5 +8,7 @@
     <string name="title_activity_book_list">BookListActivity</string>
 
     <string name="title_activity_user_home_page">Home Page</string>
+    <string name="title_activity_book_listing_acrivity">BookListingAcrivity</string>
+    <string name="title_activity_book_listing">BookListingActivity</string>
 
 </resources>

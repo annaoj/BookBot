@@ -64,11 +64,7 @@ public class CreatNewPostActivity extends AppCompatActivity {
                 }
                 else {
 
-                    ParseObject gameScore = new ParseObject("GameScore");
-                    gameScore.put("score", 1337);
-                    gameScore.put("playerName", "Sean Plott");
-                    gameScore.put("cheatMode", false);
-                    gameScore.saveInBackground();
+
                     //save the status in Parse
 
                     ParseObject bookpostObject = new ParseObject("BookPosts");
@@ -82,7 +78,7 @@ public class CreatNewPostActivity extends AppCompatActivity {
                                 Toast.makeText(CreatNewPostActivity.this, "Succes", Toast.LENGTH_LONG).show();
 
                                 //take user to browse book
-                                Intent takeUserToBrowse = new Intent(CreatNewPostActivity.this, MainActivity.class);
+                                Intent takeUserToBrowse = new Intent(CreatNewPostActivity.this, UserHomePageActivity.class);
                                 startActivity(takeUserToBrowse);
                             } else {
                                 //error

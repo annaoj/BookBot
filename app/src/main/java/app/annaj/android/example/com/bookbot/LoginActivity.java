@@ -17,31 +17,31 @@ import com.parse.ParseUser;
 public class LoginActivity extends Activity {
 
     protected EditText mUsername;
-    protected EditText mPassword;
-    protected Button mLoginBtn;
-    protected Button mCreatAccountBtn;
+            protected EditText mPassword;
+            protected Button mLoginBtn;
+            protected Button mCreatAccountBtn;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
-
-        // Enable Local Datastore.
-       // Parse.enableLocalDatastore(this);
-        // Parse.initialize(this);
-
-        mUsername =(EditText)findViewById(R.id.usernameLoginTextBox);
-        mPassword =(EditText)findViewById(R.id.passwordLoginTextBox);
-        mLoginBtn =(Button)findViewById(R.id.loginBtn);
-        mCreatAccountBtn =(Button)findViewById(R.id.createAccBtn);
-
-        //listen to when create acc btn is clicked
-        mCreatAccountBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Intent takeUserToReg=new Intent(LoginActivity.this,RegisterActivity.class);
-                startActivity(takeUserToReg);
-            }
+            protected void onCreate(Bundle savedInstanceState) {
+                super.onCreate(savedInstanceState);
+                setContentView(R.layout.activity_login);
+
+                // Enable Local Datastore.
+                // Parse.enableLocalDatastore(this);
+                // Parse.initialize(this);
+
+                mUsername =(EditText)findViewById(R.id.usernameLoginTextBox);
+                mPassword =(EditText)findViewById(R.id.passwordLoginTextBox);
+                mLoginBtn =(Button)findViewById(R.id.loginBtn);
+                mCreatAccountBtn =(Button)findViewById(R.id.createAccBtn);
+
+                //listen to when create acc btn is clicked
+                mCreatAccountBtn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent takeUserToReg=new Intent(LoginActivity.this,RegisterActivity.class);
+                        startActivity(takeUserToReg);
+                    }
         });
 
 

@@ -37,7 +37,6 @@
         <activity
             android:name=".SplashScreen"
             android:theme="@style/AppTheme.NoActionBar" >
-
         </activity>
         <activity
             android:name=".CreatNewPostActivity"
@@ -53,12 +52,20 @@
             android:name=".UserHomePageActivity"
             android:label="@string/title_activity_user_home_page"
             android:theme="@style/AppTheme.NoActionBar" >
+
+        </activity>
+
+        <activity
+            android:name=".BookListingActivity"
+            android:label="@string/title_activity_book_listing"
+            android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".SingleItemView"></activity>
     </application>
 
 </manifest>
