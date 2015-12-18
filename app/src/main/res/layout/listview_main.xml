@@ -13,26 +13,27 @@
         android:id="@+id/txtPlacesTitle"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+android:paddingTop="20dp"
         android:gravity="center"
+
         android:text="List of Posted Books"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="#594f59"
+        android:textColor="#282328"
         android:textSize="@dimen/abc_text_size_headline_material"
         android:textStyle="bold"
         />
 
     <ListView
-        android:background="@drawable/note"
+
         android:id="@+id/listview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="25dp"
-        android:layout_marginTop="20dp"
+        android:background="#f3f3f6"
 
-android:paddingRight="40dp"
-        android:paddingBottom="50dp"
-        android:paddingLeft="40dp"
-        android:paddingTop="40dp" />
+
+android:paddingRight="10dp"
+        android:layout_marginBottom="20dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="20dp" android:paddingBottom="20dp"/>
 
 </LinearLayout>

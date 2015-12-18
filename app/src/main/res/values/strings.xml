@@ -1,14 +1,37 @@
 <resources>
     <string name="app_name">BookBot</string>
     <string name="action_settings">Settings</string>
-    <string name="title_activity_register">RegisterActivity</string>
-    <string name="title_activity_browse_books">BrowseBooksActivity</string>
+    <string name="title_activity_register">Registration</string>
+    <string name="title_activity_browse_books">Browse Books</string>
     <string name="title_activity_login">LoginActivity</string>
-    <string name="title_activity_creat_new_post">CreatNewPostActivity</string>
-    <string name="title_activity_book_list">BookListActivity</string>
+    <string name="title_activity_creat_new_post">Creat New Post</string>
+    <string name="title_activity_book_list">Posts</string>
 
     <string name="title_activity_user_home_page">Home Page</string>
-    <string name="title_activity_book_listing_acrivity">BookListingAcrivity</string>
-    <string name="title_activity_book_listing">BookListingActivity</string>
+    <string name="title_activity_book_listing_acrivity">Book Listing</string>
+    <string name="title_activity_book_listing">Book Listing</string>
+    <string name="title_activity_scanner">Scanner</string>
 
+    <string-array name="buySellSpinnerArray">
+        <item>Buy</item>
+        <item>Sell</item>
+
+    </string-array>
+    <string name="title_activity_create_user_profile">Create new Profile</string>
+    <string-array name="spSchoolNamesArray">
+        <item>Baruch_College</item>
+        <item>City_College</item>
+        <item>Hunter_College</item>
+        <item>John_Jay_College</item>
+        <item>Lehman_College</item>
+        <item>Brooklyn_College</item>
+        <item>College_of_Technology</item>
+        <item>Kingsborough_Community_College</item>
+        <item>Medgar_Evers_College</item>
+        <item>College_of_Staten_Island</item>
+        <item>LaGuardia_Community_College</item>
+        <item>Queens_College</item>
+        <item>Queensborough_Community_College</item>
+        <item>York_College</item>
+    </string-array>
 </resources>

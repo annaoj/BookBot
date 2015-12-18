@@ -1,8 +1,6 @@
 package app.annaj.android.example.com.bookbot;
 
-/**
- * Created by Anna on 12/14/2015.
- */
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;

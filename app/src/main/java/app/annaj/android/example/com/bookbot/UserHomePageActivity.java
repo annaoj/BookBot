@@ -47,7 +47,13 @@ mPostBook.setOnClickListener(new View.OnClickListener() {
     }
 });
         //listen to when Scanner  btn is clicked
-
+mScanner.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        Intent takeUserToScan=new Intent(UserHomePageActivity.this,ScannerActivity.class);
+        startActivity(takeUserToScan);
+    }
+});
         //listen to when Search  btn is clicked
 
 

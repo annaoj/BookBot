@@ -87,8 +87,6 @@ public class BookListingActivity extends AppCompatActivity {
             super.onPreExecute();
             // Create a progressdialog
             mProgressDialog = new ProgressDialog(BookListingActivity.this);
-            // Set progressdialog title
-            mProgressDialog.setTitle("Parse.com Simple ListView Tutorial");
             // Set progressdialog message
             mProgressDialog.setMessage("Loading...");
             mProgressDialog.setIndeterminate(false);
@@ -98,7 +96,7 @@ public class BookListingActivity extends AppCompatActivity {
 
         @Override
         protected Void doInBackground(Void... params) {
-            // Locate the class table named "Country" in Parse.com
+            // Locate the class table named "BookPosts" in Parse.com
             ParseQuery<ParseObject> query = new ParseQuery<ParseObject>(
                     "BookPosts");
             query.orderByDescending("_created_at");
@@ -118,7 +116,7 @@ public class BookListingActivity extends AppCompatActivity {
             // Pass the results into an ArrayAdapter
             adapter = new ArrayAdapter<String>(BookListingActivity.this,
                     R.layout.listview_item);
-            // Retrieve object "name" from Parse.com database
+            // Retrieve object "newPost" from Parse.com database
             for (ParseObject bookPosts : ob) {
                 adapter.add((String) bookPosts.get("newPost"));
             }

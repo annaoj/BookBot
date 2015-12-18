@@ -1,29 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:showIn="@layout/activity_creat_new_post"
-    android:orientation="vertical">
+    tools:showIn="@layout/activity_creat_new_post">
+
+    <TextView
+        android:id="@+id/postNewBookTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="Create new post "
+        android:textAlignment="center"
+        android:textColor="#1c1b1c"
+        android:textSize="20sp"
+        android:typeface="serif" />
+
+    <EditText
+        android:id="@+id/bookTitlePostBook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_below="@+id/postNewBookTitle"
+        android:layout_gravity="center"
+        android:ems="10"
+        android:hint="Book Title" />
+
+    <EditText
+        android:id="@+id/authorPostBook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bookTitlePostBook"
+        android:layout_gravity="center"
+        android:ems="10"
+        android:hint="Author(s)" />
+
+
+    <Spinner
+        android:id="@+id/buySellSpinnerPostBookS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/authorPostBook"
+        android:entries="@array/buySellSpinnerArray" />
+
+    <!--<EditText
+        android:id="@+id/pricePostBook"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/buySellSpinnerPostBookS"
+        android:layout_gravity="left"
+        android:ems="10"
+        android:hint="Price" />-->
 
 
     <EditText
+        android:id="@+id/postbookEditText"
         android:layout_width="match_parent"
-        android:layout_height="150dp" android:hint="Create new post to sell or buy a book"
+        android:layout_height="60dp"
         android:gravity="top"
-        android:id="@+id/postbookEditText"/>
+        android:hint="Write your post to sell or buy a book here" />
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" android:text="Post"
         android:id="@+id/postBookBtn"
-        android:background="#c4f05752" />
-
-
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#c4f05752"
+        android:text="Post" />
 
 
 </LinearLayout>

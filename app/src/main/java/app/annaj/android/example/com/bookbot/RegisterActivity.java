@@ -33,10 +33,7 @@ public class RegisterActivity extends Activity {
                         .setAction("Action", null).show();
             }
         });*/
-        // Enable Local Datastore.
-       // Parse.enableLocalDatastore(this);
 
-       // Parse.initialize(this);
 
         
 

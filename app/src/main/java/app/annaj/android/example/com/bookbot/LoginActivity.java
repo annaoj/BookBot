@@ -26,9 +26,7 @@ public class LoginActivity extends Activity {
                 super.onCreate(savedInstanceState);
                 setContentView(R.layout.activity_login);
 
-                // Enable Local Datastore.
-                // Parse.enableLocalDatastore(this);
-                // Parse.initialize(this);
+
 
                 mUsername =(EditText)findViewById(R.id.usernameLoginTextBox);
                 mPassword =(EditText)findViewById(R.id.passwordLoginTextBox);
@@ -54,7 +52,7 @@ public class LoginActivity extends Activity {
                 String password = mPassword.getText().toString().trim();
 
 
-                //login the user using parse sdk,usin logincallback method
+                //login the user using parse sdk,using logincallback method
                 ParseUser.logInInBackground(username, password, new LogInCallback() {
                     @Override
                     public void done(ParseUser user, ParseException e) {
@@ -63,10 +61,10 @@ public class LoginActivity extends Activity {
                             // Hooray! The user is logged in.
                             Toast.makeText(LoginActivity.this, "welcome back!", Toast.LENGTH_LONG).show();
 
-                            //take user to browsebooks
+                            //take user to UserHomePage
 
-                            Intent takeUserToBrowseBooks = new Intent(LoginActivity.this, BrowseBooksActivity.class);
-                            startActivity(takeUserToBrowseBooks);
+                            Intent takeUserToHP = new Intent(LoginActivity.this, UserHomePageActivity.class);
+                            startActivity(takeUserToHP);
 
                         } else {
                             // Signup failed. Look at the ParseException to see what happened.

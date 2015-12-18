@@ -47,6 +47,7 @@
             android:name=".CreatNewPostActivity"
             android:label="@string/title_activity_creat_new_post"
             android:theme="@style/AppTheme.NoActionBar" >
+
         </activity>
         <activity
             android:name=".BrowseBooksActivity"
@@ -57,16 +58,24 @@
             android:name=".UserHomePageActivity"
             android:label="@string/title_activity_user_home_page"
             android:theme="@style/AppTheme.NoActionBar" >
-
         </activity>
-
         <activity
             android:name=".BookListingActivity"
             android:label="@string/title_activity_book_listing"
+            android:theme="@style/AppTheme" >
+        </activity>
+        <activity android:name=".SingleItemView" />
+        <activity
+            android:name=".ScannerActivity"
+            android:label="@string/title_activity_scanner"
             android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".CreateUserProfile"
+            android:label="@string/title_activity_create_user_profile"
+            android:theme="@style/AppTheme" >
 
         </activity>
-        <activity android:name=".SingleItemView"></activity>
     </application>
 
 </manifest>
